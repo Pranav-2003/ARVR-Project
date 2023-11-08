@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-	
-
-public class MainScript : MonoBehaviour
+public class GameScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    
     public float rotationSpeed = 0.3f; // Rotation speed
-    public float translationSpeed = 100000.0f; // Translation (movement) speed
+    public float translationSpeed = 1000.0f; // Translation (movement) speed
     
     void Start()
     {
