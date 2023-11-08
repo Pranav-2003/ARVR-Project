@@ -7,10 +7,25 @@ public class GameScript : MonoBehaviour
     // Start is called before the first frame update
     public float rotationSpeed = 0.3f; // Rotation speed
     public float translationSpeed = 1000.0f; // Translation (movement) speed
-    
+    public Canvas canvasToHide;
+    public float newWidth = 1000.0f; // Set your desired width
+    public float newHeight = 800.0f;
+
+    void opencanvas()
+    {
+        canvasToHide.gameObject.SetActive(true);
+    }
+    void closecanvas()
+    {
+        canvasToHide.gameObject.SetActive(false);
+    }
     void Start()
     {
-        
+        canvasToHide = GameObject.Find("Canvas").GetComponent<Canvas>();
+        closecanvas();
+
+        RectTransform rectTransform = canvasToHide.GetComponent<RectTransform>();
+        rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
     }
 
     // Update is called once per frame
@@ -28,6 +43,25 @@ public class GameScript : MonoBehaviour
         Vector3 currentRotation = transform.rotation.eulerAngles;
         currentRotation.x = Mathf.Clamp(currentRotation.x, -90f, 90f);
         transform.rotation = Quaternion.Euler(currentRotation);
-    
+
+        if (Input.GetMouseButtonDown(0)) // Left mouse button click
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                GameObject clickedObject = hit.collider.gameObject;
+                
+                if (clickedObject.name == "Computer_1" || clickedObject.name == "Computer.001_1" || clickedObject.name == "Computer.003_1") // Replace "YourTag" with the desired tag
+                {
+                    opencanvas();
+                }
+                Debug.Log("Clicked Object: " + clickedObject.name);
+            }
+        }
+
+        
+
     }
 }
