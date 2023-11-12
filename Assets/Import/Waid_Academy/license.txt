@@ -1,0 +1,11 @@
+Model Information:
+* title:	Waid Academy
+* source:	https://sketchfab.com/3d-models/waid-academy-79c4c9027ec541ebabcbf47f74ac7e1a
+* author:	Dr Deepak Gopinath (https://sketchfab.com/dgopinath)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Waid Academy" (https://sketchfab.com/3d-models/waid-academy-79c4c9027ec541ebabcbf47f74ac7e1a) by Dr Deepak Gopinath (https://sketchfab.com/dgopinath) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
