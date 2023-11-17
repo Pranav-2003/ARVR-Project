@@ -7,21 +7,30 @@ public class GameScript : MonoBehaviour
     // Start is called before the first frame update
     public float rotationSpeed = 0.3f; // Rotation speed
     public float translationSpeed = 1000.0f; // Translation (movement) speed
+  
+    public Canvas canvasToHide_1;
+    public Canvas canvasToHide_2;
     public Canvas canvasToHide;
+
     public float newWidth = 1000.0f; // Set your desired width
     public float newHeight = 800.0f;
 
     void opencanvas()
     {
-        canvasToHide.gameObject.SetActive(true);
+        canvasToHide_1.gameObject.SetActive(true);
+        canvasToHide_2.gameObject.SetActive(false);
     }
     void closecanvas()
     {
-        canvasToHide.gameObject.SetActive(false);
+        canvasToHide_1.gameObject.SetActive(false);
+        canvasToHide_2.gameObject.SetActive(false);
     }
+
     void Start()
     {
         canvasToHide = GameObject.Find("Canvas").GetComponent<Canvas>();
+        canvasToHide_1 = GameObject.Find("Canvas").GetComponent<Canvas>();
+        canvasToHide_2 = GameObject.Find("Canvas_desktop").GetComponent<Canvas>();
         closecanvas();
 
         RectTransform rectTransform = canvasToHide.GetComponent<RectTransform>();
