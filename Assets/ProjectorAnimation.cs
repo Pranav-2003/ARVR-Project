@@ -17,11 +17,11 @@ public class ProjectorAnimation : MonoBehaviour
     {
         if (Input.GetKey("u") || Input.GetKey(KeyCode.U))
         {
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            //transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         }
         if (Input.GetKey("j") || Input.GetKey(KeyCode.J))
         {
-            transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+            //transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
         }
     }
 }

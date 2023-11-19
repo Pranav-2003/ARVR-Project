@@ -7,7 +7,7 @@ public class ProjectorScale : MonoBehaviour
     // Start is called before the first frame update
    
     public float moveSpeed = 460.0f;
-    public float incrementAmount = 0.00145f;
+    public float incrementAmount = 0.000045f;
     
     void Start()
     {

@@ -6,7 +6,7 @@ public class GameScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public float rotationSpeed = 0.3f; // Rotation speed
-    public float translationSpeed = 1000.0f; // Translation (movement) speed
+    public float translationSpeed = 2500.0f; // Translation (movement) speed
   
     public Canvas canvasToHide;
     public Canvas canvasToHide_1;
@@ -71,6 +71,15 @@ public class GameScript : MonoBehaviour
         Vector3 currentRotation = transform.rotation.eulerAngles;
         currentRotation.x = Mathf.Clamp(currentRotation.x, -90f, 90f);
         transform.rotation = Quaternion.Euler(currentRotation);
+
+        if (Input.GetKey("p") || Input.GetKey(KeyCode.P))
+        {
+            transform.Translate(Vector3.up * translationSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey("l") || Input.GetKey(KeyCode.L))
+        {
+            transform.Translate(Vector3.down * translationSpeed * Time.deltaTime);
+        }
 
         if (Input.GetMouseButtonDown(0)) // Left mouse button click
         {
