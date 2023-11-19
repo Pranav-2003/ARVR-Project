@@ -46,7 +46,9 @@ public class GameScript : MonoBehaviour
 
     void Start()
     {
-        canvasToHide = GameObject.Find("Canvas").GetComponent<Canvas>();
+        canvasToHide = GameObject.Find("Canvas_server").GetComponent<Canvas>();
+        canvasToHide.gameObject.SetActive(false);
+
         canvasToHide_1 = GameObject.Find("Canvas").GetComponent<Canvas>();
         canvasToHide_2 = GameObject.Find("Canvas_desktop").GetComponent<Canvas>();
         canvasToHide_3 = GameObject.Find("Canvas_desktop_1").GetComponent<Canvas>();
@@ -94,6 +96,17 @@ public class GameScript : MonoBehaviour
                 {
                     if( !(canvasToHide_1.gameObject.activeSelf) && !(canvasToHide_2.gameObject.activeSelf) && !(canvasToHide_3.gameObject.activeSelf))
                         opencanvas_1();
+                }
+                else if(clickedObject.name == "eric")
+                {
+                    if((canvasToHide.gameObject.activeSelf))
+                    {
+                        canvasToHide.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        canvasToHide.gameObject.SetActive(true);
+                    }
                 }
                 Debug.Log("Clicked Object: " + clickedObject.name);
             }

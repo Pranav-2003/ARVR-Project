@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rp_manuel_animated_001_dancing
+* source:	https://sketchfab.com/3d-models/rp-manuel-animated-001-dancing-26fd20874ba248fb84115a46e3918759
+* author:	melodygieh (https://sketchfab.com/melodygieh)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rp_manuel_animated_001_dancing" (https://sketchfab.com/3d-models/rp-manuel-animated-001-dancing-26fd20874ba248fb84115a46e3918759) by melodygieh (https://sketchfab.com/melodygieh) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ivan Komarov
+* source:	https://sketchfab.com/3d-models/ivan-komarov-b652e6f568374726a780105210de9a1b
+* author:	amogil (https://sketchfab.com/amogil)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ivan Komarov" (https://sketchfab.com/3d-models/ivan-komarov-b652e6f568374726a780105210de9a1b) by amogil (https://sketchfab.com/amogil) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
