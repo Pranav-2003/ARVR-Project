@@ -8,22 +8,40 @@ public class GameScript : MonoBehaviour
     public float rotationSpeed = 0.3f; // Rotation speed
     public float translationSpeed = 1000.0f; // Translation (movement) speed
   
+    public Canvas canvasToHide;
     public Canvas canvasToHide_1;
     public Canvas canvasToHide_2;
-    public Canvas canvasToHide;
+    public Canvas canvasToHide_3;
 
     public float newWidth = 1000.0f; // Set your desired width
     public float newHeight = 800.0f;
 
-    void opencanvas()
+    public void opencanvas_1()
     {
         canvasToHide_1.gameObject.SetActive(true);
         canvasToHide_2.gameObject.SetActive(false);
+        canvasToHide_3.gameObject.SetActive(false);
     }
-    void closecanvas()
+    
+    public void opencanvas_2()
+    {
+        canvasToHide_1.gameObject.SetActive(false);
+        canvasToHide_2.gameObject.SetActive(true);
+        canvasToHide_3.gameObject.SetActive(false);
+    }
+    
+    public void opencanvas_3()
     {
         canvasToHide_1.gameObject.SetActive(false);
         canvasToHide_2.gameObject.SetActive(false);
+        canvasToHide_3.gameObject.SetActive(true);
+    }
+    
+    public void closecanvas()
+    {
+        canvasToHide_1.gameObject.SetActive(false);
+        canvasToHide_2.gameObject.SetActive(false);
+        canvasToHide_3.gameObject.SetActive(false);
     }
 
     void Start()
@@ -31,6 +49,7 @@ public class GameScript : MonoBehaviour
         canvasToHide = GameObject.Find("Canvas").GetComponent<Canvas>();
         canvasToHide_1 = GameObject.Find("Canvas").GetComponent<Canvas>();
         canvasToHide_2 = GameObject.Find("Canvas_desktop").GetComponent<Canvas>();
+        canvasToHide_3 = GameObject.Find("Canvas_desktop_1").GetComponent<Canvas>();
         closecanvas();
 
         RectTransform rectTransform = canvasToHide.GetComponent<RectTransform>();
@@ -64,7 +83,8 @@ public class GameScript : MonoBehaviour
                 
                 if (clickedObject.name == "Computer_1" || clickedObject.name == "Computer.001_1" || clickedObject.name == "Computer.003_1") // Replace "YourTag" with the desired tag
                 {
-                    opencanvas();
+                    if( !(canvasToHide_1.gameObject.activeSelf) && !(canvasToHide_2.gameObject.activeSelf) && !(canvasToHide_3.gameObject.activeSelf))
+                        opencanvas_1();
                 }
                 Debug.Log("Clicked Object: " + clickedObject.name);
             }
